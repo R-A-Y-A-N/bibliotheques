@@ -40,6 +40,7 @@
 
                 @if($role === 'adherent')
                     <x-nav-link :href="route('livres.index')">Catalogue</x-nav-link>
+                    <x-nav-link :href="route('resume.index')">IA</x-nav-link>
                     <x-nav-link :href="url('/users/' . auth()->id() . '/emprunts')">Mes emprunts</x-nav-link>
                 @endif
 
@@ -112,9 +113,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            Profile
-                        </x-dropdown-link>
+                       
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

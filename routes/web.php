@@ -6,6 +6,12 @@ use App\Http\Controllers\Web\LivreController;
 use App\Http\Controllers\Web\EmpruntController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ResumeController;
+// Affichage du formulaire
+Route::get('/resume', [ResumeController::class, 'index'])->name('resume.index');
+
+// Traitement de la requête de résumé
+Route::post('/resume', [ResumeController::class, 'generer'])->name('resume.generer');
 
 Route::get('/', function () {
     return view('welcome');

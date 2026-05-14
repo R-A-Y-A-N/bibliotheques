@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace app\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Livre;
@@ -14,7 +14,9 @@ class LivreController extends Controller
 
     public function index()
     {
-        $livres = Livre::with(['auteur', 'categorie'])->paginate(8);
+        $livres = Livre::with(['auteur', 'categorie'])
+    ->latest()
+    ->paginate(12);
 
         return view('biblio.livres.index', compact('livres'));
     }

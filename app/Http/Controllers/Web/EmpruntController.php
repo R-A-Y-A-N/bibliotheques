@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace app\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use App\Models\Livre;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Emprunt;
 use App\Models\Penalite;
-use App\Models\user;
+use App\Models\User;
 
 
 
